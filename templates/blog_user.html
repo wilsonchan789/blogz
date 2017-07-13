@@ -11,10 +11,11 @@
             <p class='author'>written by <a href='/blog?user={{ blog.owner.id }}'>{{ blog.owner.username }}</a> on {{ blog.pub_date }}</p>
             <hr />
         {% endfor %}
-        {% if blogs.has_prev %}<a href="{{ url_for('blog', page=blogs.prev_num) }}">&lt;&lt; Newer blogs</a>{% else %}&lt;&lt; Newer blogs{% endif %} | 
-        {% if blogs.has_next %}<a href="{{ url_for('blog', page=blogs.next_num) }}">Older blogs &gt;&gt;</a>{% else %}Older blogs &gt;&gt;{% endif %}
+        {% if blogs.has_prev %}<a href="{{ url_for('blog', user=[owner.id], page=blogs.prev_num) }}">&lt;&lt; Newer blogs</a>{% else %}&lt;&lt; Newer blogs{% endif %} | 
+        {% if blogs.has_next %}<a href="{{ url_for('blog', user=[owner.id], page=blogs.next_num) }}">Older blogs &gt;&gt;</a>{% else %}Older blogs &gt;&gt;{% endif %}
     {% endif %}
 {% endblock %}
 
 
 
+            

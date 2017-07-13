@@ -5,3 +5,18 @@
 h1 {
     text-align: center;
 }
+
+#user-account {
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul {
+    padding: 0;
+    display: inline-block;
+}

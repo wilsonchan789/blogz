@@ -2,7 +2,6 @@
 
 {% block content %}
     <h1>Add a Blog Entry</h1>
-
     <form method='POST' action="/blog">
         <table>
             <tr>
@@ -11,7 +10,6 @@
                 </td>
                 <td>
                     <input type="text" name="blog_title" value="{{ blog_title }}" />
-                    <span class="error">{{ title_error }}</span>
                 </td>
             </tr>
             <tr>
@@ -20,7 +18,6 @@
                 </td>
                 <td>
                     <textarea rows="6" cols="20" name="blog_body">{{ blog_body }}</textarea>
-                    <span class="error">{{ body_error }}</span>
                 </td>
             </tr>
         </table>
